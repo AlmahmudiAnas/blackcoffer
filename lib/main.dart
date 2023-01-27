@@ -1,4 +1,5 @@
-import 'package:blackcoffer/login.dart';
+import 'package:blackcoffer/Screens/intro.dart';
+import 'package:blackcoffer/Screens/login.dart';
 import 'package:blackcoffer/routes.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Black Coffer',
       debugShowCheckedModeBanner: false,
-      initialRoute: LoginScreen.routeName,
+      initialRoute: IntroScreen.routeName,
       routes: routes,
     );
   }
