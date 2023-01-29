@@ -1,6 +1,8 @@
 import 'package:blackcoffer/My%20Widgets/my_button.dart';
+import 'package:blackcoffer/Screens/home_screen.dart';
 import 'package:blackcoffer/Screens/otp_screen.dart';
 import 'package:blackcoffer/consts.dart';
+import 'package:blackcoffer/local_auth_api.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -64,7 +66,20 @@ class LoginScreen extends StatelessWidget {
                     size: size,
                     buttonText: 'Login',
                     onPressed: () {
-                      Navigator.pushNamed(context, OTPScreen.routeName);
+                      Navigator.pushNamed(context, HomeScreen.routeName);
+                    },
+                    color: kScondaryColor,
+                    textColor: kPrimaryColor,
+                  ),
+                  SizedBox(height: size.height * 0.02),
+                  MyButton(
+                    size: size,
+                    buttonText: 'Login with Fingerprint',
+                    onPressed: () async {
+                      final isAuthenticated = await LocalAuthApi.authenticate();
+                      if (isAuthenticated) {
+                        Navigator.pushNamed(context, HomeScreen.routeName);
+                      }
                     },
                     color: kScondaryColor,
                     textColor: kPrimaryColor,

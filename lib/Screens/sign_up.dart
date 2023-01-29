@@ -110,7 +110,7 @@ class SignupScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: size.height * 0.05),
+                  SizedBox(height: size.height * 0.02),
                   MyButton(
                     size: size,
                     buttonText: 'Next',
@@ -120,6 +120,7 @@ class SignupScreen extends StatelessWidget {
                     color: kScondaryColor,
                     textColor: kPrimaryColor,
                   ),
+                  SizedBox(height: size.height * 0.05),
                 ],
               ),
             ),

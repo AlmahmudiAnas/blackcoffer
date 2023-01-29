@@ -1,3 +1,4 @@
+import 'package:blackcoffer/Screens/home_screen.dart';
 import 'package:blackcoffer/Screens/intro.dart';
 import 'package:blackcoffer/Screens/login.dart';
 import 'package:blackcoffer/Screens/otp_screen.dart';
@@ -10,4 +11,5 @@ final Map<String, WidgetBuilder> routes = {
   SignupScreen.routeName: (context) => SignupScreen(),
   OTPScreen.routeName: (context) => OTPScreen(),
   IntroScreen.routeName: (context) => IntroScreen(),
+  HomeScreen.routeName:(context) => HomeScreen(),
 };

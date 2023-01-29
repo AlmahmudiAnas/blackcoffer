@@ -3,6 +3,8 @@ import 'package:blackcoffer/consts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'home_screen.dart';
+
 class OTPScreen extends StatelessWidget {
   const OTPScreen({super.key});
   static String routeName = "OTP Screen";
@@ -39,7 +41,9 @@ class OTPScreen extends StatelessWidget {
                     MyButton(
                       size: size,
                       buttonText: "Sign up",
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, HomeScreen.routeName);
+                      },
                       color: kScondaryColor,
                       textColor: kPrimaryColor,
                     ),
